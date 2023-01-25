@@ -1,0 +1,29 @@
+name: DBL Academy
+options: 
+  bundleIdPrefix: com.dblacademy
+targets:
+  DBL Academy:
+    type: application
+    platform: iOS
+    deploymentTarget: "14.0"
+    sources: [DBL Academy]
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+    sources:
+      - DBL Academy
+      - DBL AcademyUITests
+    scheme:
+      testTargets:
+       - DBL AcademyTests
+  DBL AcademyTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - DBL AcademyTests
+  DBL AcademyUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - DBL AcademyUITests
+    

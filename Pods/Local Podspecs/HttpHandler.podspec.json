@@ -1,0 +1,29 @@
+{
+  "name": "HttpHandler",
+  "version": "0.0.1",
+  "summary": "Description of library",
+  "homepage": "https://github.com/RioRizkyRainey/DBL-Play.git",
+  "license": "MIT",
+  "authors": {
+    "Ruangguru iOS Team": "ios-team@ruangguru.com"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "swift_versions": "5.0",
+  "source": {
+    "git": "https://github.com/RioRizkyRainey/DBL-Play.git",
+    "branch": "master"
+  },
+  "source_files": [
+    "Source",
+    "Source/**/*.{swift}"
+  ],
+  "public_header_files": "Source/**/*.h",
+  "exclude_files": [
+    "UnitTests",
+    "Demo"
+  ],
+  "resources": "",
+  "swift_version": "5.0"
+}

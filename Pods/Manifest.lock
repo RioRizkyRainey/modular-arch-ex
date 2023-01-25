@@ -1,0 +1,53 @@
+PODS:
+  - DomainStore (0.0.1)
+  - Hero (1.6.2)
+  - HttpHandler (0.0.1)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - SDWebImage (5.14.3):
+    - SDWebImage/Core (= 5.14.3)
+  - SDWebImage/Core (5.14.3)
+  - UIKitExtension (0.0.1)
+
+DEPENDENCIES:
+  - DomainStore (from `Domains/DomainStore/.module.podspec`)
+  - Hero
+  - HttpHandler (from `Libraries/HttpHandler/.module.podspec`)
+  - RxCocoa (= 6.5.0)
+  - RxSwift (= 6.5.0)
+  - SDWebImage
+  - UIKitExtension (from `Libraries/UIKitExtension/.module.podspec`)
+
+SPEC REPOS:
+  trunk:
+    - Hero
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  DomainStore:
+    :path: Domains/DomainStore/.module.podspec
+  HttpHandler:
+    :path: Libraries/HttpHandler/.module.podspec
+  UIKitExtension:
+    :path: Libraries/UIKitExtension/.module.podspec
+
+SPEC CHECKSUMS:
+  DomainStore: d4e509aadc59cc9d37aa63d030f4e9c10aa55a04
+  Hero: c69009dbc9e2f0472e081adc644dba05fcedae72
+  HttpHandler: 8247c55a6ac23bd83a8ba18d39bb7cc96b3bea7d
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SDWebImage: 9c36e66c8ce4620b41a7407698dda44211a96764
+  UIKitExtension: d3f89509aef2827c64ab4ee9bf0e0d4c9fa5f214
+
+PODFILE CHECKSUM: 866cde4498afc7fcd5ca32ef17e0854176a34f91
+
+COCOAPODS: 1.11.3

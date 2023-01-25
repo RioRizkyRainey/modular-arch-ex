@@ -1,0 +1,75 @@
+name: DomainStore
+options:
+  bundleIdPrefix: com.idntimes.IDNTimes.*
+targets: 
+  DomainStore-Demo:
+    type: application
+    info:
+      path: SupportingFiles/Info-Demo.plist
+      properties:
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UILaunchStoryboardName: LaunchScreen
+    platform: iOS
+    sources:
+      - path: DomainStore/Demo
+    settings:
+      TARGETED_DEVICE_FAMILY: 1,2
+      IPHONEOS_DEPLOYMENT_TARGET: 11.0
+      SWIFT_VERSION: 5.0
+      PRODUCT_NAME: DomainStoreDemo
+      configs:
+        debug:
+          EXCLUDED_ARCHS[sdk=iphonesimulator*]: arm64
+          CODE_SIGN_IDENTITY: iPhone Developer
+          CODE_SIGN_STYLE: Manual
+        release:
+          EXCLUDED_ARCHS[sdk=iphonesimulator*]: arm64
+          CODE_SIGN_IDENTITY: iPhone Distribution
+          CODE_SIGN_STYLE: Manual
+  DomainStore:
+    type: framework
+    info:
+      path: SupportingFiles/Info-Main.plist
+    platform: iOS
+    sources:
+      - path: .module.project.yml
+        buildPhase: none
+      - path: DomainStore/Sources
+    settings:
+      TARGETED_DEVICE_FAMILY: 1,2
+      IPHONEOS_DEPLOYMENT_TARGET: 11.0
+      SWIFT_VERSION: 5.0
+      PRODUCT_NAME: DomainStore
+      EXCLUDED_ARCHS[sdk=iphonesimulator*]: arm64
+  DomainStore-UnitTests:
+    type: bundle.unit-test
+    info:
+      path: SupportingFiles/Info-UnitTests.plist
+    platform: iOS
+    sources:
+      - path: UnitTests
+    settings:
+      TARGETED_DEVICE_FAMILY: 1,2
+      IPHONEOS_DEPLOYMENT_TARGET: 11.0
+      SWIFT_VERSION: 5.0
+      PRODUCT_NAME: DomainStoreUnitTests
+
+schemes:
+  Domain-Store:
+    build:
+      parallelizeBuild: true
+      targets:
+        DomainStore-Demo: all
+        
+        DomainStore-UnitTests: [test]
+    run:
+      config: Debug
+      executable: DomainStore-Demo
+    test:
+      config: Debug
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release

@@ -1,0 +1,6 @@
+framework module Pods_Modular_Arch {
+  umbrella header "Pods-Modular-Arch-umbrella.h"
+
+  export *
+  module * { export * }
+}

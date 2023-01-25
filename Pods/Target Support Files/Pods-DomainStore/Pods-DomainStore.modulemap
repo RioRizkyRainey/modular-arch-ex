@@ -1,0 +1,6 @@
+module Pods_DomainStore {
+  umbrella header "Pods-DomainStore-umbrella.h"
+
+  export *
+  module * { export * }
+}
